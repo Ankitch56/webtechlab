@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .gender-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .gender-group input[type="checkbox"] {
+            display: none;
+        }
+        .gender-group label {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+        .gender-group label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #007bff;
+        }
+        .gender-group input:checked + label:before {
+            background-color: #007bff;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="#" method="post">
+           
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+ 
+ <div class="form-group">
+    <label>Gender</label>
+    <div class="gender-group">
+        <input type="checkbox" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        
+        <input type="checkbox" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="city">City</label>
+    <select id="city" name="city" required>
+        <option value="">Select City</option>
+        <option value="Delhi">delhi</option>
+        <option value="luchnow">Luchnow</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Ghaziabad">Ghaziabad</option>
+    </select>
+</div>
+
+<div class="form-group">
+    
+    <button type="submit">Submit</button>
+    <button type="submit">Clear</button>
+</div>
+</form>
+</div>
+
+</body>
+</html>
